@@ -346,8 +346,9 @@
 
 </main>
 
-<nav class="barra" id="barra" hidden aria-label="Ir a una muestra">
+<nav class="barra" id="barra" hidden aria-label="Ir a una muestra o al cierre">
   <button type="button" class="nav-p" data-ir="m1">1</button><button type="button" class="nav-p" data-ir="m2">2</button><button type="button" class="nav-p" data-ir="m3">3</button><button type="button" class="nav-p" data-ir="m4">4</button><button type="button" class="nav-p" data-ir="m5">5</button><button type="button" class="nav-p" data-ir="m6">6</button><button type="button" class="nav-p" data-ir="m7">7</button><button type="button" class="nav-p" data-ir="m8">8</button>
+  <button type="button" class="nav-p estrella" data-ir="cierre" aria-label="Cierre">★</button>
 </nav>
 
 <style>
@@ -503,8 +504,8 @@ input[type=text]:focus, textarea:focus { border-color:var(--acento); }
 .rev-n { width:1.5rem; flex:none; font-family:'LanceSans'; font-size:.75rem; color:var(--acento);
   text-align:center; }
 
-.barra { position:fixed; bottom:0; left:0; right:0; z-index:30; display:flex; gap:.22rem;
-  padding:.5rem .45rem calc(.5rem + env(safe-area-inset-bottom));
+.barra { position:fixed; bottom:0; left:0; right:0; z-index:30; display:flex; gap:.18rem;
+  padding:.5rem .35rem calc(.5rem + env(safe-area-inset-bottom));
   background:var(--sup); border-top:2px solid var(--linea);
   box-shadow:0 -3px 14px rgba(0,0,0,.13); }
 .barra[hidden] { display:none; }
@@ -515,6 +516,9 @@ input[type=text]:focus, textarea:focus { border-color:var(--acento); }
   font-weight:700; }
 .nav-p.activa { background:var(--tinta); color:var(--fondo); border-color:var(--tinta);
   font-weight:700; }
+.nav-p.estrella { color:var(--acento); border-color:var(--acento); font-size:1.15rem;
+  line-height:1; }
+.nav-p.estrella.activa { background:var(--acento); border-color:var(--acento); color:#FFF; }
 
 .pasos-nav { display:flex; gap:.5rem; margin-top:.4rem; }
 .btn-paso { flex:1; min-height:3.1rem; font-family:'SimplonMono'; font-size:.85rem; cursor:pointer;
